@@ -29,13 +29,16 @@ public class Main extends PApplet {
 
 	public void draw() {
 		background(255);
+		fill(0);
+		textAlign(CENTER, CENTER);
+		textSize(20);
+		text("Recordatorios creados: " + list.size(), 150, 30);
 
 		for (int i = 0; i < list.size(); i++) {
-			
 			fill(255);
 			rectMode(CENTER);
-			rect(list.get(i).getX(), list.get(i).getY(), 200, 50);
-			
+			rect(list.get(i).getX(), list.get(i).getY(), 300, 100);
+
 			fill(0);
 			textAlign(CENTER, CENTER);
 			textSize(20);

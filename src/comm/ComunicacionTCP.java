@@ -86,8 +86,10 @@ public class ComunicacionTCP extends Thread {
 		float x = Float.parseFloat(main.getArregloRecor()[0]);
 		float y = Float.parseFloat(main.getArregloRecor()[1]);
 		String recordatorio = main.getArregloRecor()[2];
+		String importancia = main.getArregloRecor()[3];
 		
-		main.getList().add(new Recordatorio(x, y, recordatorio));
+		main.getList().add(new Recordatorio(x, y, recordatorio, importancia));
+		
 		System.out.println(main.getList().get(0).getX() + " " + main.getList().get(0).getY() + " " + main.getList().get(0).getRecordatorio());
 	}
 	

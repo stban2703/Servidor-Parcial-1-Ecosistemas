@@ -29,10 +29,6 @@ public class Main extends PApplet {
 
 	public void draw() {
 		background(255);
-		fill(0);
-		textAlign(CENTER, CENTER);
-		textSize(20);
-		text("Recordatorios creados: " + list.size(), 150, 30);
 
 		for (int i = 0; i < list.size(); i++) {
 			fill(255);
@@ -43,7 +39,28 @@ public class Main extends PApplet {
 			textAlign(CENTER, CENTER);
 			textSize(20);
 			text(list.get(i).getRecordatorio(), list.get(i).getX(), list.get(i).getY());
+
+			if (list.get(i).getImportancia().equals("leve")) {
+				fill(0, 255, 0);
+
+			} else if (list.get(i).getImportancia().equals("media")) {
+				fill(255, 255, 0);
+
+			} else if (list.get(i).getImportancia().equals("alta")) {
+				fill(255, 0, 0);
+				
+			} else {
+				fill(155);
+
+			}
+
+			ellipse(list.get(i).getX(), list.get(i).getY() - 50, 50, 50);
 		}
+
+		fill(0);
+		textAlign(CENTER, CENTER);
+		textSize(20);
+		text("Recordatorios creados: " + list.size(), 150, 30);
 
 	}
 
